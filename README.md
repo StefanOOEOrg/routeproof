@@ -1,5 +1,7 @@
 # Routeproof – Route optimizer for LiteLLM
 
+Routeproof is a concept repository: Markdown only, no runnable code, and therefore no CI and no `ci-ok` check. The first pull request that adds code adds `.github/workflows/ci.yml` in the same pull request — a `ci-ok-test` matrix plus the `ci-ok` aggregate, so the required context has one stable name. Until then, merges here are reviewed by a human and nothing else. A pull request that adds code without that workflow must not be merged.
+
 ## Goal and principles
 
 Routeproof is an open-source plugin for the LiteLLM proxy (MIT license). It sends every prompt to the cheapest model that solves it well enough, and it measures whether that routing decision was right. LiteLLM stays the gateway and provides the OpenAI-compatible API, provider calls, keys and budgets. Routeproof hooks into the proxy, analyses and categorizes each prompt, picks the model and calibrates its choices from measured quality. The goal is the best cost/quality trade-off.
